@@ -1,17 +1,25 @@
+---
+const pageTitle = "Tour Info";
+---
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/tour/">Tour</a>
         <a href="/playlist/">Playlist</a>
-        <h1>My Astro Learning Blog</h1>
-        <p>This is where I will post about my journey learning Astro.</p>
+        <h1>{pageTitle}</h1>
+        <p>This is where we will anonce new concert.</p>
+        <ul>
+            <li> <a href="/posts/post-1/">25.12.24 Concert in Dublin</a> </li>
+            <li> <a href="/posts/post-2/">26.12.24 Concert in Cork</a> </li>
+            <li> <a href="/posts/post-3/">31.12.24 Concert in Galway</a> </li>
+        </ul>
     </body>
 </html>
