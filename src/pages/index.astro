@@ -1,5 +1,9 @@
 ---
+import '../styles/global.css'; //импорт стиля
+import Header from '../components/Header.astro'; // импорт ссылок
+import Footer from '../components/Footer.astro'; // импорт футера
 const pageTitle = "Home Page";
+
 ---
 <html lang="en">
 	<head>
@@ -10,10 +14,11 @@ const pageTitle = "Home Page";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about/">About</a>
-		<a href="/tour/">Tour</a>
-		<a href="/playlist/">Playlist</a>
+		<Header /> <!--вставка ссылок из Navigation.astro-->
 		<h1>{pageTitle}</h1>
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
     </body>
 </html>

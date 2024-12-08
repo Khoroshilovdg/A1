@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css'; //импорт стиля
+import Header from '../components/Header.astro'; // импорт ссылок
+import Footer from '../components/Footer.astro'; // импорт футера
 const pageTitle = "Tour Info";
 ---
 <html lang="en">
@@ -10,10 +13,7 @@ const pageTitle = "Tour Info";
 		<title>{pageTitle}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/tour/">Tour</a>
-        <a href="/playlist/">Playlist</a>
+        <Header /> <!--вставка ссылок из Navigation.astro-->
         <h1>{pageTitle}</h1>
         <p>This is where we will anonce new concert.</p>
         <ul>
@@ -21,5 +21,9 @@ const pageTitle = "Tour Info";
             <li> <a href="/posts/post-2/">26.12.24 Concert in Cork</a> </li>
             <li> <a href="/posts/post-3/">31.12.24 Concert in Galway</a> </li>
         </ul>
+        <Footer />
+        <script>
+            import "../scripts/menu.js";
+        </script>
     </body>
 </html>
